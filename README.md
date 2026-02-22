@@ -321,8 +321,8 @@ These were intentional tradeoffs to prioritize a working and polished interview 
 
 ## 🙌 Author
 
-**Ri Z**
-Built as an interview-focused React Native mobile app demo using Expo.
+**Shah Mohammad Rizvi**
+Built as a React Native mobile app demo using Expo.
 
 ---
 
