@@ -169,3 +169,163 @@ ToDo/
 ├── 3.jpeg                  # Screenshot 3 (README)
 ├── 4.jpeg                  # Screenshot 4 (README)
 └── README.md
+````
+
+> A larger production app would likely split logic into:
+>
+> * `components/`
+> * `hooks/`
+> * `utils/`
+> * `storage/`
+> * `constants/`
+
+For interview speed, keeping it in `App.js` is a reasonable tradeoff.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+* **Node.js**
+* **npm**
+* **Expo Go** (Android/iOS mobile app) OR Android Emulator
+
+---
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd ToDo
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the Expo development server:
+
+```bash
+npm start
+```
+
+---
+
+## 📱 Run on Mobile (Recommended)
+
+### Android (Fastest)
+
+1. Install **Expo Go** from Google Play Store
+2. Ensure your phone and laptop are on the **same Wi-Fi**
+3. Run `npm start`
+4. Scan the QR code shown in the terminal/browser using **Expo Go**
+
+### Alternative Options
+
+* `npm run android` → Android emulator/device
+* `npm run web` → Browser preview (for quick UI checks)
+
+---
+
+## 🧪 How to Test the App
+
+Use this checklist to verify functionality:
+
+* [ ] Add multiple tasks
+* [ ] Toggle task completion
+* [ ] Delete a task (confirm alert appears)
+* [ ] Edit a task and update the title
+* [ ] Cancel edit mode
+* [ ] Filter tasks (All / Active / Done)
+* [ ] Clear completed tasks
+* [ ] Close/reopen the app and confirm tasks persist
+
+---
+
+## ⚙️ Key Implementation Details
+
+### Task Object Shape
+
+Each task is stored as an object similar to:
+
+```js
+{
+  id: "1700000000000",
+  title: "Prepare interview demo",
+  completed: false,
+  createdAt: "2026-02-22T12:34:56.789Z"
+}
+```
+
+### Data Persistence Flow
+
+* On app mount:
+
+  * Load tasks from AsyncStorage
+* On task state change:
+
+  * Save updated task list to AsyncStorage automatically
+
+---
+
+## 📈 What This Project Demonstrates
+
+This project showcases the ability to:
+
+* Build and ship a complete mobile UI quickly
+* Make sensible scope decisions under time pressure
+* Implement CRUD operations cleanly
+* Persist user data
+* Handle real UX interactions (filtering, editing, confirmations)
+* Deliver a professional presentation (README, screenshots, structure)
+
+This is exactly the kind of practical execution interviewers often want to see.
+
+---
+
+## 🔮 Future Improvements (If Extended)
+
+If this were expanded beyond interview scope, the next improvements would be:
+
+* ✅ Drag and reorder tasks
+* ✅ Due dates / reminders
+* ✅ Priority labels (Low / Medium / High)
+* ✅ Categories / tags
+* ✅ Search tasks
+* ✅ Dark mode
+* ✅ Unit tests (Jest / React Native Testing Library)
+* ✅ Component-based architecture refactor
+* ✅ TypeScript migration
+* ✅ Cloud sync / backend integration
+
+---
+
+## 🐛 Known Limitations (Intentional for MVP Speed)
+
+* Single-screen app
+* No authentication / cloud sync
+* No push notifications/reminders
+* No task sorting or priority yet
+* Minimal folder modularization (kept in `App.js` for fast iteration)
+
+These were intentional tradeoffs to prioritize a working and polished interview demo.
+
+---
+
+## 🙌 Author
+
+**Ri Z**
+Built as an interview-focused React Native mobile app demo using Expo.
+
+---
+
+## 📄 License
+
+This project is for educational/interview demonstration purposes.
